@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  background-color: #e2ceb1;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  .title-menu {
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    .menu {
+      background-color: transparent;
+      border: none;
+      margin: 10px;
+    }
+    i {
+      font-size: 30px;
+      color: #391e10;
+    }
+    h1 {
+      color: #391e10;
+    }
+  }
+  .header-buttons {
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
+
+    .search {
+      position: relative;
+      display: flex;
+      align-items: center;
+      border: 1px solid #391e10;
+      border-radius: 20px;
+      padding: 5px 10px;
+    }
+    .search-input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+    .search i {
+      margin-right: 5px;
+      opacity: 0.25;
+    }
+
+    .heart-button,
+    .cart-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      gap: 2px; /* Smanjen razmak između ikonice i teksta */
+    }
+    .heart-button i,
+    .cart-button i {
+      font-size: 20px;
+    }
+    .heart-button p,
+    .cart-button p {
+      margin: 5px;
+      font-size: 14px;
+    }
+  }
+}
