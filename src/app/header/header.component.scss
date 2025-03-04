@@ -12,10 +12,41 @@
     align-items: center;
     margin-right: 10px;
     .menu {
+      position: relative;
       background-color: transparent;
       border: none;
       margin: 10px;
+      cursor: pointer;
     }
+
+    .menu-dropdown {
+      margin-top: 5px;
+      position: absolute;
+      background-color: white;
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-dropdown ul {
+      list-style-type: none;
+      color: #391e10;
+      font-weight: bold;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-dropdown li {
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .menu-dropdown li:hover {
+      border-radius: 10px;
+      background-color: #f1f1f1;
+    }
+
     i {
       font-size: 30px;
       color: #391e10;

@@ -1,7 +1,14 @@
 <header class="header">
   <div class="title-menu">
-    <button class="menu" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
+    <button class="menu" (click)="toggleMenu()">
+      <i class="{{ isMenuOpen ? 'fas fa-times' : 'fas fa-bars' }}"></i>
+      <div class="menu-dropdown" *ngIf="isMenuOpen">
+        <ul>
+          <li>3D Posteri</li>
+          <li>O nama</li>
+          <li>Kontakt</li>
+        </ul>
+      </div>
     </button>
     <h1>DrvoWood</h1>
   </div>
