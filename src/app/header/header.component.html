@@ -1,31 +1,40 @@
 <header class="header">
-  <div class="title-menu">
-    <button class="menu" (click)="toggleMenu()">
-      <i class="{{ isMenuOpen ? 'fas fa-times' : 'fas fa-bars' }}"></i>
-      <div class="menu-dropdown" *ngIf="isMenuOpen">
-        <ul>
-          <li>3D Posteri</li>
-          <li>O nama</li>
-          <li>Kontakt</li>
-        </ul>
-      </div>
-    </button>
-    <h1>DrvoWood</h1>
+  <div class="col-md-4 title">
+    <em><h1>DrvoWood</h1></em>
   </div>
 
-  <div class="header-buttons">
-    <div class="search">
-      <i class="fas fa-search"></i>
-      <input type="text" class="search-input" placeholder="Pretrazi" />
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae harum autem
+    nemo ipsa dolores iusto
+  </p>
+  <nav *ngIf="!isMobile">
+    <ul class="nav-links">
+      <li><a href="#">Početna</a></li>
+      <li><a href="#">O nama</a></li>
+      <li><a href="#">3D Posteri</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <div *ngIf="isMobile">
+    <button class="menu" (click)="toggleMenu()">
+      <i class="{{ isMenuOpen ? 'fas fa-times' : 'fas fa-bars' }}"></i>
+    </button>
+    <div class="menu-dropdown" *ngIf="isMenuOpen">
+      <ul>
+        <li><a href="#">Početna</a></li>
+        <li><a href="#">O nama</a></li>
+        <li><a href="#">3D Posteri</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
     </div>
+  </div>
+  <div class="col-md-4 header-buttons">
     <button class="heart-button">
       <i class="far fa-heart"></i>
-      <p>Omiljeno</p>
     </button>
     <button class="cart-button">
       <i class="fa fa-shopping-cart"></i>
-      <p>Korpa</p>
-      <!-- Prazna korpa (outline) -->
     </button>
   </div>
 </header>

@@ -1,103 +1,115 @@
 .header {
   display: flex;
-  background-color: #e2ceb1;
+  position: relative;
   justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  text-align: center;
+  background-color: #413122;
+  background-image: url("/assets/header.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  z-index: 0;
+}
+
+.header::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: rgba(64, 32, 16, 0.7);
+  z-index: -1;
+}
+.nav-links {
+  display: flex;
   padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  .title-menu {
-    padding-left: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 10px;
-    .menu {
-      position: relative;
-      background-color: transparent;
-      border: none;
-      margin: 10px;
-      cursor: pointer;
-    }
-
-    .menu-dropdown {
-      margin-top: 5px;
-      position: absolute;
-      background-color: white;
-      width: 200px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .menu-dropdown ul {
-      list-style-type: none;
-      color: #391e10;
-      font-weight: bold;
-      padding: 0;
-      margin: 0;
-    }
-
-    .menu-dropdown li {
-      padding: 10px;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    .menu-dropdown li:hover {
-      border-radius: 10px;
-      background-color: #f1f1f1;
-    }
-
-    i {
-      font-size: 30px;
-      color: #391e10;
-    }
-    h1 {
-      color: #391e10;
-    }
+  padding-left: 40px;
+  border-bottom: 1px solid;
+}
+.menu {
+  background-color: transparent;
+  border: none;
+  color: #ebcea8;
+}
+ul {
+  list-style-type: none;
+  color: #ebcea8;
+}
+.nav-links a,
+li,
+menu li,
+a {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: inline-block;
+  color: #ebcea8;
+  z-index: 1;
+  margin-right: 20px;
+  text-decoration: none;
+  &:hover {
+    font-weight: bold;
   }
-  .header-buttons {
-    padding-right: 20px;
-    display: flex;
+}
+.menu {
+  position: relative;
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  font-size: 20px;
+  color: #ebcea8;
+  left: 5px;
+  top: 30px;
+  z-index: 1;
+}
+.menu-dropdown {
+  position: absolute;
+  background-color: #413122;
+  left: 0;
+  top: 50px;
+  right: 100px;
+}
+.menu-dropdown li {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid #ebcea8;
+  width: 100%;
+  box-sizing: border-box;
+}
+.menu-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.title h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #ebcea8;
+  margin-left: 30px;
+  z-index: 1;
+}
+p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: x-large;
+  color: #ebcea8;
+}
+.header-buttons {
+  display: flex;
+  margin-top: 20px;
+  margin-right: 20px;
+  gap: 15px;
+  z-index: 1;
+  .heart-button,
+  .cart-button {
     align-items: center;
-    gap: 15px;
-    flex-direction: row;
-
-    .search {
-      position: relative;
-      display: flex;
-      align-items: center;
-      border: 1px solid #391e10;
-      border-radius: 20px;
-      padding: 5px 10px;
-    }
-    .search-input {
-      background-color: transparent;
-      border: none;
-      outline: none;
-    }
-    .search i {
-      margin-right: 5px;
-      opacity: 0.25;
-    }
-
-    .heart-button,
-    .cart-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      gap: 2px; /* Smanjen razmak između ikonice i teksta */
-    }
-    .heart-button i,
-    .cart-button i {
-      font-size: 20px;
-    }
-    .heart-button p,
-    .cart-button p {
-      margin: 5px;
-      font-size: 14px;
-    }
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .heart-button i,
+  .cart-button i {
+    font-size: 20px;
+    color: #ebcea8;
   }
 }
