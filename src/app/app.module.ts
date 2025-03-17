@@ -1,18 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { CarouselModule } from '@coreui/angular';
 
 @NgModule({
-  declarations: [
- 
-  ],
-  imports: [
-    BrowserModule,
-    FontAwesomeModule, 
-  
-  ],
+  declarations: [],
+  imports: [CarouselModule, BrowserModule, FontAwesomeModule],
   providers: [],
-  bootstrap: []
+  bootstrap: [],
 })
-export class AppModule { }
+export class AppModule {}
